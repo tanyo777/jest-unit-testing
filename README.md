@@ -1,2 +1,1 @@
-# jest-unit-testing
-Unit Testing with Jest course
+# Unit and Integration Testing using Jest
