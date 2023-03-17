@@ -8,6 +8,6 @@ export default class Person {
     }
 
     getInfo(): string {
-        return `Hell1, my name is ${this.name} and im ${this.age} years old!`;
+        return `Hello, my name is ${this.name} and im ${this.age} years old!`;
     }
 }
