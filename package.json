@@ -1,0 +1,24 @@
+{
+  "name": "jest-unit-testing",
+  "version": "1.0.0",
+  "description": "Jest recognizes test file in three ways: - files that have extension .test.js - files that have extension .spec.js - All files inside __tests__ folder or directory.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test-coverage": "jest --coverage",
+    "compile-ts": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "@types/node": "^18.15.3",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.0.5"
+  },
+  "dependencies": {
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.2"
+  }
+}
