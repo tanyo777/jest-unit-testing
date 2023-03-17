@@ -8,3 +8,7 @@ Jest recognizes test file in three ways:
 - files that have extension .test.js
 - files that have extension .spec.js
 - All files inside __tests__ folder or directory.
+
+
+# Test Nodejs API
+- https://www.testim.io/blog/unit-test-rest-api/
