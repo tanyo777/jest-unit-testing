@@ -9,6 +9,10 @@ describe('test the price calculator', () => {
         return priceCalculator = new PriceCalculator(100);  
     });
 
+    it("should test if the price is a number", () => {
+        expect(typeof priceCalculator.basePrice).toEqual("number");
+    });
+
     it("should test the shipping fee method", () => {
         const shippingFee = priceCalculator.shippingFee();
         expect(shippingFee).toEqual(20);
