@@ -61,12 +61,12 @@ expect(expectError).toThrowError("Invalid Argument!);
 
 # Jest aliases and watch mode
 
-- only 
-describe.only() // will run only this describe
-it/test.only() // will run only this test case inside the describe
+- only
+  describe.only() // will run only this describe
+  it/test.only() // will run only this test case inside the describe
 
-- skip 
-describe.skip() // skip test suite
+- skip
+  describe.skip() // skip test suite
 
 - it.todo() // todo test case
 
@@ -75,5 +75,32 @@ We can run tests in watch mode and jest will continously watch for any changes i
 - jest --watchAll (will rerun all tests)
 
 - jest --watch (will rerun only the changed test)
+
+# Debugging with VSCode
+
+Nodejs typescript debugging configuration
+
+```
+{
+    "type": "node-terminal",
+    "request": "launch",
+    "name": "Debug Current TS File (ts-node)",
+    "command": "npx ts-node -- ${fileBasenameNoExtension}",
+    "skipFiles": ["<node_internals>/**"],
+    "cwd": "${fileDirname}"
+}
+```
+
+Jest debugging configuration
+
+```
+{
+    "type": "node-terminal",
+    "name": "Debug Current Test File (npm run test)",
+    "request": "launch",
+    "command": "npm run test -- ${fileBasenameNoExtension}",
+    "cwd": "${fileDirname}"
+}
+```
 
 # Test Coverage Report

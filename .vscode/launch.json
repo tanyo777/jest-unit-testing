@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node-terminal",
+      "request": "launch",
+      "name": "Debug Current TS File (ts-node)",
+      "command": "npx ts-node -- ${fileBasenameNoExtension}",
+      "skipFiles": ["<node_internals>/**"],
+      "cwd": "${fileDirname}"
+    }
+  ]
+}
