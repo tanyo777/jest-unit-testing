@@ -113,6 +113,6 @@ Jest uses Istanbul library for code coverage.
 
 To exclude file from the test coverage we can add:
 
-- **_/_ istanbul ignore file _/_** or **_/_ istanbul ignore next _/_** comment at the top of the file which we don't want to collect test coverage from
+- **istanbul ignore file** or **istanbul ignore next** comment at the top of the file which we don't want to collect test coverage from
 
 - "testPathIgnorePatterns" : ["<rootDir>/ignore/this/path/", "<rootDit>/src/index.ts"] // to exclude a file from the test coverage
