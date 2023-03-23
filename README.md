@@ -29,6 +29,7 @@ Jest searches for test, **test**, or file.test.ts files and folders and run thos
 # AAA principles
 
 Triple A describes how a test should be structured.
+We should write smaller unit tests for every functionality.
 
 - arrange
   const test = new TestClass();
@@ -61,4 +62,18 @@ EXAMPLE: .toBe(), .toEqual()
 - .toBeUndefined() // expects undefined
 
 - .toBeDefined() // expects value different than undefined
+
+# Parametrized Tests
+Parametrized test allow us to test with several input values.
+We can se .only on test cases and test suites (it/test, describe) to execute only them.
+
+Only this test case will be ran inside the describe.
+
+```
+it.only.each([{ input: "abc", expected: "ABC" }])('parametrized test', (input, expected) => {
+    const actual = convertToUpperCase(input);
+
+    expect(actual).toBe(expected);
+});
+```
 

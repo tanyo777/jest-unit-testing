@@ -1,13 +1,16 @@
 import Utils, { stringInfo } from './utils';
 
 describe('test utils functions', () => {
-  it('should test toUpperCase method', () => {
+  // Parametrized Test
+  it.each([
+    { input: 'abc', expected: 'ABC' },
+    { input: 'test', expected: 'TEST' },
+  ])('parametrized test for the toUpperCase method($input, $expected)', ({ input, expected }) => {
     const utils = new Utils();
-    const expected = 'TEST';
 
-    const actual = utils.toUpperCase('test');
+    const actual = utils.toUpperCase(input);
 
-    expect(actual).toEqual(expected);
+    expect(actual).toBe(expected);
   });
 
   it('should test getStringInfo method', () => {
