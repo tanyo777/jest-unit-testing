@@ -5,13 +5,16 @@ describe('test utils functions', () => {
   it.each([
     { input: 'abc', expected: 'ABC' },
     { input: 'test', expected: 'TEST' },
-  ])('parametrized test for the toUpperCase method($input, $expected)', ({ input, expected }) => {
-    const utils = new Utils();
+  ])(
+    'parametrized test for the toUpperCase method($input, $expected)',
+    ({ input, expected }) => {
+      const utils = new Utils();
 
-    const actual = utils.toUpperCase(input);
+      const actual = utils.toUpperCase(input);
 
-    expect(actual).toBe(expected);
-  });
+      expect(actual).toBe(expected);
+    }
+  );
 
   it('should test getStringInfo method', () => {
     const utils = new Utils();

@@ -104,3 +104,15 @@ Jest debugging configuration
 ```
 
 # Test Coverage Report
+
+Test coverage lets us know what is the test coverage percentage for our application.
+Jest uses Istanbul library for code coverage.
+
+- we can add --coverage in the cli script
+- or add collectCoverage: true in the jest configuration
+
+To exclude file from the test coverage we can add:
+
+- **_/_ istanbul ignore file _/_** or **_/_ istanbul ignore next _/_** comment at the top of the file which we don't want to collect test coverage from
+
+- "testPathIgnorePatterns" : ["<rootDir>/ignore/this/path/", "<rootDit>/src/index.ts"] // to exclude a file from the test coverage
