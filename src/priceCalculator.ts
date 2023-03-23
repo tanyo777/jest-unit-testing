@@ -1,17 +1,16 @@
 export default class PriceCalculator {
+  basePrice: number;
 
-    basePrice: number;
-    
-    constructor(basePrice: number) {
-        this.basePrice = basePrice;
-    }
+  constructor(basePrice: number) {
+    this.basePrice = basePrice;
+  }
 
-    getTotal(): number {
-        return this.basePrice - this.shippingFee();
-    }
+  getTotal(): number {
+    return this.basePrice - this.shippingFee();
+  }
 
-    shippingFee(): number {
-        // the free is 20% of the baseprice 
-        return this.basePrice * (20/100);
-    }
+  shippingFee(): number {
+    // the free is 20% of the baseprice
+    return this.basePrice * (20 / 100);
+  }
 }
