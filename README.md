@@ -1,45 +1,40 @@
-# Unit and Integration Testing using Jest
+# Test Driven Development using Jest
 
-Jest itself have assertion library and test runner.
-We can also generate test coverage for the project using jest.
-
-
-Jest recognizes test file in three ways:
-- files that have extension .test.js
-- files that have extension .spec.js
-- All files inside __tests__ folder or directory.
+What are software tests?
+- Code that runs other code and make assertions or checks on it.
+- Unit testing means testing the smallest unit (Method, Class, Module).
 
 
-# Test Nodejs API
-- https://www.testim.io/blog/unit-test-rest-api/
+# Jest
+Jest is a testing framework for writing and running test cases.Jest includes test runner and assertion library itself.
+Jest searches for test, __test__, or file.test.ts files and folders and run those test suites.
 
+# Jest setup
+- npm install -D typescript jest ts-jest @types/jest ts-node @types/node
 
-# Jest Unit Testing
-
-Jest is a testing library which includes a test runner and assertion library.With Jest we can run/create test cases and also generate test coverage report.
+# Jest globals
 
 - describe
-Creates a block that groups together several related tests.
+Creates a test suite and we can create test cases in it.Describe groups related test cases.
 
-- test/it
-Creates and runs a test case.
+- it/test
+it or test is used within describe block/test suite to create test case.
 
 - expect
-The expect function is used to check if the values meet certain conditions and gives you access to different matchers to validate it.
-EXAMPLE: expect(valueof name).toEqual("string"); // true/false
+Create an assertion and check for expected value.
+EXAMPLE: expect(result).toEqual("Tanyo");
 
-- beforeAll
+# AAA principles
+Triple A describes how a test should be structured.
 
-- beforeEach
+- arrange
+const test = new TestClass();
 
-- afterEach
+- act
+const sum = test.sum(1, 2);
 
-- afterAll
+- assert
+expect(sum).toEqual(3);
 
-# Mock Functions/Spies
 
-# Testing Asynchronous Code
-We can use async/await with try/catch in the test case to test asyncronous code.
-We can also use .resolves/.rejects to wait for the promise to resolve or reject and then validate the otput.
-
-EXAMPLE:  expect(fetchName()).resolves.toEqual("Tanyo");
+# Setup and Teardown

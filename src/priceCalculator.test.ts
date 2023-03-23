@@ -14,8 +14,16 @@ describe('test the price calculator', () => {
     });
 
     it("should test the shipping fee method", () => {
-        const shippingFee = priceCalculator.shippingFee();
-        expect(shippingFee).toEqual(20);
+
+        // Proper unit test structure
+        // arrange
+        const expected = 20;
+
+        // act
+        const actual = priceCalculator.shippingFee();
+
+        // assert
+        expect(actual).toEqual(expected);
     });
 
     it("should test the total method", () => {
