@@ -8,7 +8,7 @@ const jestConfig: JestConfigWithTsJest = {
     '**/*.ts',
   ],
   testEnvironment: 'node',
-  verbose: true
+  verbose: true,
 }
 
 export default jestConfig
