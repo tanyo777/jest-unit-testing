@@ -52,14 +52,41 @@ expect(getNumber.mock.lastCall); // returns the arguments for the last mock call
 
 # Spies
 
-Spies work pretty much the same as mocks.The only difference is that spies create half mock objects and also track method calls.
+Spies work pretty much the same as mocks.The only difference is that spies can keep the implementation or create a new one and also track method calls.
 
 - jest.spyOn(class/object, method); // spy on a method within a class
 
-We could also overwrite the origin function and create our own implementation:
+We could also overwrite the original function and create our own implementation:
 
 - jest.spyOn(object, method).mockImplementation(() => {}); // create custom implementation
 
 We can also spy on modules:
 
 - jest.spyOn(console, "log"); // spy on the console.log method
+
+# Mocking modules
+
+With jest.mock() we can mock whole classes and modules with Jest.
+
+Mock the fileModule and change only the changedFunction implementation:
+
+```
+jest.mock('./fileModule, () => ({
+...jest.requireActual("./fileModule"),
+changedFunction: () => {}
+}));
+```
+
+Mock axios get method:
+
+```
+jest.mock('axios', () => ({
+get: () => {
+return {
+id: 1,
+name: 'Tanyo',
+age: 23,
+};
+},
+}));
+```

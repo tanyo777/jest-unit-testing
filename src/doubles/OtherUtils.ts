@@ -1,3 +1,6 @@
+import axios from 'axios';
+import { v4 } from 'uuid';
+
 export type stringInfo = {
   lowerCase: string;
   upperCase: string;
@@ -7,4 +10,16 @@ export type stringInfo = {
 
 export function calculateComplexity(stringInfo: stringInfo): number {
   return stringInfo.length * stringInfo.characters.length;
+}
+
+export function toUpperCaseWithId(arg: string) {
+  return arg.toUpperCase();
+}
+
+export function toLowerCaseWithId(arg: string) {
+  return arg.toLowerCase() + v4();
+}
+
+export function getUser() {
+  return axios.get('/user/1');
 }
