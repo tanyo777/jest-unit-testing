@@ -72,8 +72,8 @@ Mock the fileModule and change only the changedFunction implementation:
 
 ```
 jest.mock('./fileModule, () => ({
-...jest.requireActual("./fileModule"),
-changedFunction: () => {}
+  ...jest.requireActual("./fileModule"),
+  changedFunction: () => {}
 }));
 ```
 
@@ -81,12 +81,22 @@ Mock axios get method:
 
 ```
 jest.mock('axios', () => ({
-get: () => {
-return {
-id: 1,
-name: 'Tanyo',
-age: 23,
-};
-},
+  get: () => {
+    return {
+      id: 1,
+      name: 'Tanyo',
+      age: 23,
+    };
+  },
+}));
+```
+
+// mock uuid v4 method
+
+```
+jest.mock('uuid', () => ({
+  v4: () => {
+    return '123';
+  },
 }));
 ```
