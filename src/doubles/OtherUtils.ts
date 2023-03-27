@@ -23,3 +23,7 @@ export function toLowerCaseWithId(arg: string) {
 export async function getUser() {
   return await axios.get('/user/1');
 }
+
+export async function getUsers(): Promise<object[]> {
+  return await axios.get('/user');
+}
