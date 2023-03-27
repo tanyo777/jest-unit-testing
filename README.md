@@ -3,12 +3,13 @@
 What are software tests?
 
 - Code that runs other code and make assertions or checks on it.
-- Unit testing means testing the smallest unit (Method, Class, Module).
+- Unit testing means testing the smallest unit (Method, Class, Function, Component).
 
 # Jest
 
 Jest is a testing framework for writing and running test cases.Jest includes test runner and assertion library itself.
 Jest searches for test, **test**, or file.test.ts files and folders and run those test suites.
+With Jest we can test services, controllers, functions, classes, etc..
 
 # Jest setup
 
@@ -64,6 +65,7 @@ EXAMPLE: .toBe(), .toEqual()
 - .toBeDefined() // expects value different than undefined
 
 # Parametrized Tests
+
 Parametrized test allow us to test with several input values.
 We can se .only on test cases and test suites (it/test, describe) to execute only them.
 
@@ -76,4 +78,3 @@ it.only.each([{ input: "abc", expected: "ABC" }])('parametrized test', (input, e
     expect(actual).toBe(expected);
 });
 ```
-
