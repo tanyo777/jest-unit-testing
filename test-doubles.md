@@ -5,13 +5,13 @@ A test double is a generic term to refer to any object that stands in for a prod
 - materials
   https://khalilstemmler.com/wiki/test-doubles/
 
-![doubles]("./img/doubles.svg")
+![doubles](./img/doubles.svg)
 
 # Stubs
 
 Helper objects to help us do our tests.They are mostly used for payload for a function.
 
-![stub]("./img/stub.png")
+![stub](./img/stub.png)
 
 Example: instead of getting grades (2, 3, 4, 5, 6) from a database we can stub them and use them in our tests.
 
