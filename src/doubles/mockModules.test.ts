@@ -8,6 +8,7 @@ jest.mock('./OtherUtils', () => ({
     return 'Test';
   }, // change only toUpperCaseWithId function
 }));
+import { IUser } from './orm';
 // all method within the OtherUtils.ts are empty
 // So we must create a mocked versions of them
 
@@ -22,12 +23,15 @@ jest.mock('uuid', () => ({
 
 // mock axios get method
 jest.mock('axios', () => ({
-  get: () => {
-    return {
+  get: async (): Promise<IUser> => {
+    const user = await Promise.resolve({
       id: 1,
       name: 'Tanyo',
+      email: 'tanyo.nikolov00@gmail.com',
       age: 23,
-    };
+      createdAt: '2023-03-27T11:00:30.851Z',
+    });
+    return user;
   },
 }));
 
@@ -47,8 +51,12 @@ describe('mocked modules tests', () => {
     expect(actual).toBe('test123');
   });
 
-  it('test mocked axios get method', () => {
-    const actual = OtherUtils.getUser();
+  it('test mocked axios get method', async () => {
+    const actual = await OtherUtils.getUser();
+    expect(actual).toHaveProperty('id', 1);
     expect(actual).toHaveProperty('name', 'Tanyo');
+    expect(actual).toHaveProperty('email', 'tanyo.nikolov00@gmail.com');
+    expect(actual).toHaveProperty('age', 23);
+    expect(actual).toHaveProperty('createdAt', '2023-03-27T11:00:30.851Z');
   });
 });

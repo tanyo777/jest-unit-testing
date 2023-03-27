@@ -20,6 +20,6 @@ export function toLowerCaseWithId(arg: string) {
   return arg.toLowerCase() + v4();
 }
 
-export function getUser() {
-  return axios.get('/user/1');
+export async function getUser() {
+  return await axios.get('/user/1');
 }
