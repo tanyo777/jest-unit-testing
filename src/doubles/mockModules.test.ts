@@ -2,17 +2,18 @@
 // jest.spyOn() // spy on a function/method
 // jest.mock() // mock a whole module
 
+import { IUser } from './orm';
+// all method within the OtherUtils.ts are empty
+// So we must create a mocked versions of them
+
+import * as OtherUtils from './OtherUtils';
+
 jest.mock('./OtherUtils', () => ({
   ...jest.requireActual('./OtherUtils'),
   toUpperCaseWithId: () => {
     return 'Test';
   }, // change only toUpperCaseWithId function
 }));
-import { IUser } from './orm';
-// all method within the OtherUtils.ts are empty
-// So we must create a mocked versions of them
-
-import * as OtherUtils from './OtherUtils';
 
 // mock uuid v4 method
 jest.mock('uuid', () => ({
