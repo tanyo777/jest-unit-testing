@@ -2,8 +2,8 @@ import { JestConfigWithTsJest } from 'ts-jest';
 
 const jestConfig: JestConfigWithTsJest = {
   preset: 'ts-jest',
-  rootDir: './src',
-  coverageDirectory: '../coverage',
+  rootDir: './src/server_app',
+  coverageDirectory: '../../coverage',
   collectCoverageFrom: ['<rootDir>/**/*.ts'],
   collectCoverage: true,
   testEnvironment: 'node',
