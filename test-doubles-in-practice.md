@@ -13,4 +13,10 @@ First declare what is a unit (a class, a function or a feature).
   Test from a broader view
   Little use of mocks
 
-# TDD Practice
+# Event Based App Testing
+
+Example code: ./src/server_app/utils/Utils.ts
+
+# Prototype Spy
+
+Spy on the classes prototype objects.
