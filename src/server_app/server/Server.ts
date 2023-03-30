@@ -12,7 +12,7 @@ import { ReservationsHandler } from '../handlers/ReservationsHandler';
 import { HTTP_CODES } from '../model/ServerModel';
 
 export class Server {
-  private server!: NodeServer;
+  public server!: NodeServer;
   private authorizer = new Authorizer();
   private reservationsDataAccess = new ReservationsDataAccess();
 
