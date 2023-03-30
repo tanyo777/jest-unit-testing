@@ -4,7 +4,10 @@ const jestConfig: JestConfigWithTsJest = {
   preset: 'ts-jest',
   rootDir: './src',
   coverageDirectory: '../../coverage',
-  collectCoverageFrom: ['<rootDir>/**/*.ts'],
+  collectCoverageFrom: [
+    '<rootDir>/server_app/**/*.ts',
+    '!<rootDir>/server_app/**/*.test.ts', // exclude test files from the test coverage report
+  ],
   testMatch: ['<rootDir>/integration/**/*.ts'],
   collectCoverage: true,
   testEnvironment: 'node',
