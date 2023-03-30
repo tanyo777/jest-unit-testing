@@ -14,15 +14,15 @@ To test an application for dev and test we should set env variables and to which
 
 # Environments
 
-- Dev Environment
+- Dev Environment (with devDependencies)
   Used by the developers to create new features.
   Tests, Lints and build should pass on the pipeline.
 
-- Test Environment
+- Test Environment (with devDependencies)
   It's mostly used by the QA'a to test the application end to end.
 
-- Stage/Staging Environment
+- Stage/Staging Environment (without devDependencies)
   The application is tested and deployed to the stage environment where it can be used for UAT.
 
-- Production Environment
+- Production Environment (without devDependencies)
   Used by customers.
