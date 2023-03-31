@@ -1,0 +1,21 @@
+enum CompanyPositions {
+  MANAGER,
+  SOFTWARE_ENGINEER,
+  JUNIOR_SOFTWARE_ENGINEER,
+  SENIOR_SOFTWARE_ENGINEER,
+  DEVOPS = 'DevOps',
+}
+
+// status codes enumeration
+enum ErrorCodes {
+  UNAUTHORIZED = 401,
+  INTERNAL_SERVER_ERROR = 500,
+  NOT_FOUND = 404,
+  FORBIDDEN = 403,
+  SUCCESS = 200,
+  NO_CONTENT = 204,
+  BAD_REQUEST = 400,
+  METHOD_NOT_ALLOWED = 405,
+}
+
+console.log(CompanyPositions.DEVOPS, CompanyPositions.SENIOR_SOFTWARE_ENGINEER);
