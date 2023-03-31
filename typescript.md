@@ -86,3 +86,39 @@ enum CompanyPositions {
   DEVOPS="DevOps", // DevOps
 }
 ```
+
+# Decorators
+
+They use the decorator pattern to add/extend a classses functionality.Decorators can be attached to classes, methods, properties or parameters.
+
+For example we can use decorator on class property to log every change on the property:
+
+```
+
+// property decorator
+function watchChange(target: any, key: string) {
+  // target is the class itself
+  // key is the name of our property
+
+  const logger = new Logger();
+
+  let property = target[key];
+
+  const getter = () => {
+    return property;
+  };
+
+  const setter = (newValue: any) => {
+    property = newValue;
+    logger.addLog({ property: key, newValue: newValue });
+  };
+
+  //   modify the getter and setter
+  Object.defineProperty(target, key, {
+    get: getter,
+    set: setter,
+    configurable: true,
+    enumerable: true,
+  });
+}
+```
