@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Integration tests for the register endpoint should test the get reservation by id endpoint 1`] = `
+{
+  "endDate": "testEndDate",
+  "id": "2f3b204a3b820f437839",
+  "room": "testRoom",
+  "startDate": "testStartDate",
+  "user": "testUser",
+}
+`;
